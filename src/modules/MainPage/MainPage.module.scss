@@ -1,0 +1,19 @@
+@use '@/styles/vars' as *;
+
+.dekstopShow {
+  display: block;
+
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
+
+.mobileShow {
+    display: none;
+  
+    @media (max-width: $md) {
+      display: block;
+    }
+  }
+  

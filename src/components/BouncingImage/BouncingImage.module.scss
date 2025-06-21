@@ -1,0 +1,29 @@
+@use '@/styles/vars' as *;
+
+.root {
+  cursor: pointer;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  z-index: 1;
+  background-image: url('../../../public/images/beach-head.jpg');
+  background-size: 100% 100%;
+  padding: 8px;
+
+  & span {
+    display: none;
+  }
+
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
+.pause {
+  background-image: unset;
+  border: 1px solid grey;
+
+  & span {
+    display: block;
+  }
+}

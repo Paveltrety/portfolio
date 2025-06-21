@@ -1,0 +1,31 @@
+@use '@/styles/vars' as *;
+
+.wrapper {
+  display: none;
+
+  @media (max-width: $md) {
+    display: block;
+    margin-top: 24px;
+    height: 100px;
+  }
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: moveRight 12s linear infinite;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.image {
+  display: inline-block;
+}
