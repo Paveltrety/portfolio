@@ -21,11 +21,7 @@ export const Layout = ({ isMainPage, children }: PropsWithChildren<ILayoutProps>
         <header className={styles.header}>
           <Header />
         </header>
-        {isMainPage && (
-          <div>
-            <FloatingImage />
-          </div>
-        )}
+        {isMainPage && <FloatingImage />}
         <main className={styles.content}>{children}</main>
         <footer className={styles.footer}>
           <Footer />

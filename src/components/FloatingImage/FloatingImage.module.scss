@@ -4,6 +4,8 @@
   display: none;
 
   @media (max-width: $md) {
+    position: relative;
+    overflow: hidden;
     display: block;
     margin-top: 24px;
     height: 100px;
@@ -12,20 +14,14 @@
 
 .track {
   position: absolute;
-  white-space: nowrap;
-  will-change: transform;
   animation: moveRight 12s linear infinite;
 }
 
 @keyframes moveRight {
   0% {
-    transform: translateX(-120%);
+    left: -10%;
   }
   100% {
-    transform: translateX(100vw);
+    left: 120%;
   }
-}
-
-.image {
-  display: inline-block;
 }
