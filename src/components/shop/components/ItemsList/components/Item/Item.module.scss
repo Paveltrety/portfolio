@@ -1,0 +1,21 @@
+@use '@/styles/vars' as *;
+
+.root {
+  width: 100%;
+  max-width: 270px;
+  padding: 24px 16px;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+
+.image {
+  position: relative;
+  width: 160px;
+  height: 140px;
+}
+
+.name {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+}

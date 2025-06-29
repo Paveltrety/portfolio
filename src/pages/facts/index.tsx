@@ -1,8 +1,10 @@
+import { DefaultLayout } from '@/components/DefaultLayout/DefaultLayout';
 import { SeoHead } from '@/components/SeoHead/SeoHead';
 import { MAIN_SITE_URL, Routes } from '@/constants/routes';
 import FactsPage from '@/modules/FactsPage';
+import { ReactElement } from 'react';
 
-export default function Facts() {
+function Facts() {
   return (
     <>
       <SeoHead
@@ -14,3 +16,9 @@ export default function Facts() {
     </>
   );
 }
+
+Facts.getLayout = function getLayout(page: ReactElement) {
+  return <DefaultLayout>{page}</DefaultLayout>;
+};
+
+export default Facts;

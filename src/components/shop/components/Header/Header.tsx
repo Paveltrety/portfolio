@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 
 import cn from 'classnames';
 import { Routes } from '@/constants/routes';
+import Image from 'next/image';
 
 export const Header = () => {
   const pathname = usePathname();
@@ -16,40 +17,20 @@ export const Header = () => {
         })}
         href={Routes.main}
       >
-        Обо мне
+        Главная
       </Link>
-      <Link
-        className={cn(styles.link, {
-          [styles.active]: pathname === Routes.facts,
-        })}
-        href={Routes.facts}
-      >
-        Факты
-      </Link>
-      <Link
-        className={cn(styles.link, {
-          [styles.active]: pathname === Routes.books,
-        })}
-        href={Routes.books}
-      >
-        Книги
-      </Link>
+
       <Link
         className={cn(styles.link, {
           [styles.active]: pathname === Routes.shop,
         })}
-        href={Routes.shop}
+        href={Routes.shopCatalog}
       >
-        Шоп
+        Каталог
       </Link>
-      <Link
-        className={cn(styles.link, {
-          [styles.active]: pathname === Routes.contacts,
-        })}
-        href={Routes.contacts}
-      >
-        Связь
-      </Link>
+      <button className={styles.basketIcon}>
+        <Image src={'/icons/basket.svg'} fill alt="basket" />
+      </button>
     </div>
   );
 };

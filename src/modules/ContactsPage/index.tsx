@@ -1,4 +1,3 @@
-import { Card } from '@/components/Card/Card';
 import { useForm, Controller } from 'react-hook-form';
 
 import { Input } from '@/components/ui/Input/Input';
@@ -44,7 +43,7 @@ const ContactsPage = () => {
   };
 
   return (
-    <Card>
+    <>
       <p className={styles.title}>
         Можешь написать мне <b>анонимное сообщение</b>
       </p>
@@ -82,7 +81,7 @@ const ContactsPage = () => {
 
         <Button isDisabled={isSubmitting} type="submit" text="Отправить" />
       </form>
-    </Card>
+    </>
   );
 };
 

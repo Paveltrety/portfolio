@@ -1,5 +1,3 @@
-import { Card } from '@/components/Card/Card';
-
 import styles from './MainPage.module.scss';
 
 const TextAboutPhoto = () => {
@@ -18,7 +16,7 @@ const TextAboutPhoto = () => {
 
 const MainPage = () => {
   return (
-    <Card>
+    <>
       <p>Привет! Я Павел Третьяков - фронтенд раработчик.</p>
       <br />
       <TextAboutPhoto />
@@ -28,7 +26,7 @@ const MainPage = () => {
         ситуации.
       </p>
       <br />
-    </Card>
+    </>
   );
 };
 

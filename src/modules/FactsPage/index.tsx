@@ -1,10 +1,8 @@
-import { Card } from '@/components/Card/Card';
-
 import styles from './FactsPage.module.scss';
 
 const FactsPage = () => {
   return (
-    <Card>
+    <>
       <p className={styles.title}>Данный раздел будет обязательно пополняться!</p>
       <div>
         На разработку этого сайта ушло около 8 часов:
@@ -21,7 +19,7 @@ const FactsPage = () => {
           </span>
         </div>
       </div>
-    </Card>
+    </>
   );
 };
 

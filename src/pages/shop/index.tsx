@@ -1,10 +1,10 @@
-import { DefaultLayout } from '@/components/DefaultLayout/DefaultLayout';
 import { SeoHead } from '@/components/SeoHead/SeoHead';
+import { ShopLayout } from '@/components/ShopLayout/ShopLayout';
 import { MAIN_SITE_URL, Routes } from '@/constants/routes';
-import BooksPage from '@/modules/BooksPage';
+import ShopPage from '@/modules/ShopPage';
 import { ReactElement } from 'react';
 
-function Books() {
+function Shop() {
   return (
     <>
       <SeoHead
@@ -12,13 +12,13 @@ function Books() {
         description="Спиоск прочитанных книг Павлом Третьяковым и мини рецензии"
         url={`${MAIN_SITE_URL}${Routes.books}`}
       />
-      <BooksPage />
+      <ShopPage />
     </>
   );
 }
 
-Books.getLayout = function getLayout(page: ReactElement) {
-  return <DefaultLayout>{page}</DefaultLayout>;
+Shop.getLayout = function getLayout(page: ReactElement) {
+  return <ShopLayout>{page}</ShopLayout>;
 };
 
-export default Books;
+export default Shop;

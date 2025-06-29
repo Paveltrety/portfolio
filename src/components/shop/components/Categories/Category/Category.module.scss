@@ -1,0 +1,19 @@
+@use '@/styles/vars' as *;
+
+.root {
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 6px 24px;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 0;
+    transition: 0.1s;
+  }
+}
+
+.active {
+  border-radius: 0;
+  color: #ff7430;
+}

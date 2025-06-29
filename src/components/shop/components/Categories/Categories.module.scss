@@ -1,0 +1,11 @@
+@use '@/styles/vars' as *;
+
+.root {
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding: 24px 0;
+}

@@ -1,8 +1,10 @@
+import { DefaultLayout } from '@/components/DefaultLayout/DefaultLayout';
 import { SeoHead } from '@/components/SeoHead/SeoHead';
 import { MAIN_SITE_URL, Routes } from '@/constants/routes';
 import MainPage from '@/modules/MainPage';
+import { ReactElement } from 'react';
 
-export default function Main() {
+function Main() {
   return (
     <>
       <SeoHead
@@ -14,3 +16,9 @@ export default function Main() {
     </>
   );
 }
+
+Main.getLayout = function getLayout(page: ReactElement) {
+  return <DefaultLayout>{page}</DefaultLayout>;
+};
+
+export default Main;

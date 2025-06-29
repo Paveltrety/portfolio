@@ -1,10 +1,9 @@
-import { Layout } from '@/components/Layout/Layout';
-import { Routes } from '@/constants/routes';
 import '@/styles/styles.scss';
 import '@/styles/globals.scss';
 import type { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
-import { usePathname } from 'next/navigation';
+import { NextPage } from 'next';
+import { ReactElement, ReactNode } from 'react';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -12,8 +11,16 @@ const inter = Inter({
   display: 'swap',
 });
 
-export default function App({ Component, pageProps }: AppProps) {
-  const pathname = usePathname();
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page);
 
   return (
     <>
@@ -23,9 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
 
-      <Layout isMainPage={pathname === Routes.main}>
-        <Component {...pageProps} />
-      </Layout>
+      {getLayout(<Component {...pageProps} />)}
     </>
   );
 }

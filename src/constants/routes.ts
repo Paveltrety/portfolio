@@ -5,4 +5,6 @@ export const Routes = {
   facts: '/facts',
   books: '/books',
   contacts: '/contacts',
+  shop: '/shop',
+  shopCatalog: '/shop/catalog',
 } as const;
