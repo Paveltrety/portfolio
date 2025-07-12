@@ -76,7 +76,7 @@ export const BouncingImage = () => {
       onTouchEnd={resume}
       className={styles.root}
     >
-      <span>Эй, говно, отпусти меня!!!</span>
+      <span>Эй, жук, отпусти меня!!!</span>
     </div>
   );
 };
