@@ -4,9 +4,7 @@ import styles from './Book.module.scss';
 import { IBook } from '@/types/books';
 import { Rating } from '@/components/ui/Rating/Rating';
 
-interface IBookProps extends IBook {}
-
-export const Book = ({ name, rate, image }: IBookProps) => {
+export const Book = ({ name, rate, image }: IBook) => {
   return (
     <div className={styles.root}>
       <Image className={styles.image} src={`/images/books/${image}`} alt={name} fill />
