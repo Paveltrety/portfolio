@@ -1,0 +1,23 @@
+@use '@/styles/vars' as *;
+
+.title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.description {
+  margin-bottom: 24px;
+
+  @media (max-width: $xs) {
+    margin-bottom: 16px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+}

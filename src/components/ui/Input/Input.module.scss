@@ -1,3 +1,5 @@
+@use '@/styles/vars' as *;
+
 .root {
   display: flex;
   flex-direction: column;
@@ -22,9 +24,20 @@
   &::placeholder {
     color: #bbbbbb;
   }
+
+  @media (max-width: $xs) {
+    font-size: 14px;
+    height: 36px;
+    padding: 12px 14px;
+  }
+
 }
 
 .label {
   font-size: 16px;
   font-weight: 500;
+
+  @media (max-width: $xs) {
+    font-size: 14px;
+  }
 }

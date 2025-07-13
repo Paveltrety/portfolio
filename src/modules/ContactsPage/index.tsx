@@ -23,6 +23,7 @@ const ContactsPage = () => {
     control,
     formState: { isSubmitting },
     handleSubmit,
+    reset,
   } = useForm<IForm>({ defaultValues: DEFAULT_VALUES });
 
   const onSubmit = async (data: IForm) => {
@@ -35,7 +36,7 @@ const ContactsPage = () => {
           method: 'POST',
         },
       );
-
+      reset(DEFAULT_VALUES);
       Toaster.success('Ура! Все получилось');
     } catch (error) {
       console.log(error);
