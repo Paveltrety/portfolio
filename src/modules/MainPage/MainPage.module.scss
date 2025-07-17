@@ -8,12 +8,14 @@
   }
 }
 
-
 .mobileShow {
-    display: none;
-  
-    @media (max-width: $md) {
-      display: block;
-    }
+  display: none;
+
+  @media (max-width: $md) {
+    display: block;
   }
-  
+}
+
+.resumes {
+  margin: 16px 0;
+}

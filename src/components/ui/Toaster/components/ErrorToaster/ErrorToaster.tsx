@@ -1,9 +1,10 @@
 import Image from 'next/image';
 
 import styles from './ErrorToaster.module.scss';
+import { ReactNode } from 'react';
 
 interface IErrorToasterProps {
-  message: React.ReactNode;
+  message: ReactNode;
 }
 
 export const ErrorToaster = ({ message }: IErrorToasterProps) => (

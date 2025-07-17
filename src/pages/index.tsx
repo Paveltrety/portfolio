@@ -6,8 +6,8 @@ export default function Main() {
   return (
     <>
       <SeoHead
-        title="Портфолио Павла Третьякова — Frontend разработчик"
-        description="Привет! Я Павел Третьяков, занимаюсь веб-разработкой. Мои проекты, технологии и достижения. Некоторые мысли о жизни"
+        title="Павел Третьяков — Frontend разработчик"
+        description="Привет! Я Павел Третьяков, занимаюсь веб-разработкой. Работаю за деньги с TypeScript, ReactJS и Next.js более 5 лет"
         url={`${MAIN_SITE_URL}${Routes.main}`}
       />
       <MainPage />

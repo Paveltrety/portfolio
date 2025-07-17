@@ -1,6 +1,7 @@
 import { Card } from '@/components/Card/Card';
 
 import styles from './MainPage.module.scss';
+import { ResumesList } from '../../components/ResumesList/ResumesList';
 
 const TextAboutPhoto = () => {
   return (
@@ -24,10 +25,13 @@ const MainPage = () => {
       <TextAboutPhoto />
       <br />
       <p>
-        В какой-то момент возникает желание оставить свой след в интернете. Поэтому пока начну с этого простенького сайта, а дальше по
-        ситуации.
+        Работаю за деньги с ReactJS, Next.js, TypeScript <b>более 5 лет</b>.
       </p>
       <br />
+      <p>
+        Более подробная информация о моем коммерческом опыте в <b>резюме</b>:
+      </p>
+      <ResumesList className={styles.resumes} />
     </Card>
   );
 };

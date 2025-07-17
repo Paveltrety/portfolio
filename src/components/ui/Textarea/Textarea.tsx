@@ -1,4 +1,3 @@
-import { ChangeEvent } from 'react';
 import styles from './Textarea.module.scss';
 
 interface ITextareaProps {
@@ -7,7 +6,7 @@ interface ITextareaProps {
   label: string;
   value: string;
   rows?: number;
-  onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+  onChange: () => void;
   placeholder?: string;
   error?: string;
 }

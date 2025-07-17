@@ -4,6 +4,7 @@ import { Slide, toast } from 'react-toastify';
 import { ErrorToaster, Success } from './components';
 
 import styles from './Toaster.module.scss';
+import { ReactNode } from 'react';
 
 const DEFAULT_PARAMS = {
   closeButton: false,
@@ -17,13 +18,13 @@ const DEFAULT_PARAMS = {
 } as ToastOptions;
 
 export const Toaster = {
-  success: (message: React.ReactNode, params?: ToastOptions) => {
+  success: (message: ReactNode, params?: ToastOptions) => {
     toast(<Success message={message} />, {
       ...DEFAULT_PARAMS,
       ...params,
     });
   },
-  error: (message: React.ReactNode, params?: ToastOptions) => {
+  error: (message: ReactNode, params?: ToastOptions) => {
     toast(<ErrorToaster message={message} />, { ...DEFAULT_PARAMS, ...params });
   },
 };

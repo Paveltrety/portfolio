@@ -1,11 +1,10 @@
-import { ChangeEvent } from 'react';
 import styles from './Input.module.scss';
 
 interface IInputProps {
   name: string;
   label: string;
   value: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onChange: () => void;
   placeholder?: string;
 }
 

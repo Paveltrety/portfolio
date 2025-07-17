@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import styles from './Success.module.scss';
+import { ReactNode } from 'react';
 
 interface ISuccessProps {
-  message: React.ReactNode;
+  message: ReactNode;
 }
 
 export const Success = ({ message }: ISuccessProps) => (
