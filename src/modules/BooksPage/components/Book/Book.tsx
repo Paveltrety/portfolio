@@ -1,8 +1,9 @@
 import Image from 'next/image';
 
-import styles from './Book.module.scss';
-import { IBook } from '@/types/books';
 import { Rating } from '@/components/ui/Rating/Rating';
+import { IBook } from '@/types/books';
+
+import styles from './Book.module.scss';
 
 export const Book = ({ name, rate, image }: IBook) => {
   return (

@@ -1,7 +1,7 @@
 import { Card } from '@/components/Card/Card';
 
-import styles from './MainPage.module.scss';
 import { ResumesList } from '../../components/ResumesList/ResumesList';
+import styles from './MainPage.module.scss';
 
 const TextAboutPhoto = () => {
   return (

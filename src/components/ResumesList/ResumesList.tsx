@@ -1,8 +1,9 @@
-import { DownloadLink } from '@/components/ui/DownloadLink/DownloadButton';
-import { RESUMES_LIST } from './resumesList.data';
-
-import styles from './ResumesList.module.scss';
 import classNames from 'classnames';
+
+import { DownloadLink } from '@/components/ui/DownloadLink/DownloadButton';
+
+import { RESUMES_LIST } from './resumesList.data';
+import styles from './ResumesList.module.scss';
 
 interface IResumesListProps {
   className: string;

@@ -1,10 +1,9 @@
+import { ReactNode } from 'react';
 import type { ToastOptions } from 'react-toastify';
 import { Slide, toast } from 'react-toastify';
 
 import { ErrorToaster, Success } from './components';
-
 import styles from './Toaster.module.scss';
-import { ReactNode } from 'react';
 
 const DEFAULT_PARAMS = {
   closeButton: false,

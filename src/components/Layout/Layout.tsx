@@ -1,12 +1,11 @@
 import { PropsWithChildren } from 'react';
-import { Header } from '../Header/Header';
-
-import styles from './Layout.module.scss';
+import { ToastContainer } from 'react-toastify';
 
 import { BouncingImage } from '../BouncingImage/BouncingImage';
-import { Footer } from '../Footer/Footer';
-import { ToastContainer } from 'react-toastify';
 import { FloatingImage } from '../FloatingImage/FloatingImage';
+import { Footer } from '../Footer/Footer';
+import { Header } from '../Header/Header';
+import styles from './Layout.module.scss';
 
 interface ILayoutProps {
   isMainPage?: boolean;

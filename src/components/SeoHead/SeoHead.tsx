@@ -1,5 +1,6 @@
-import { MAIN_SITE_URL } from '@/constants/routes';
 import Head from 'next/head';
+
+import { MAIN_SITE_URL } from '@/constants/routes';
 
 interface SeoHeadProps {
   title: string;

@@ -1,7 +1,7 @@
 import Image from 'next/image';
+import { ReactNode } from 'react';
 
 import styles from './ErrorToaster.module.scss';
-import { ReactNode } from 'react';
 
 interface IErrorToasterProps {
   message: ReactNode;

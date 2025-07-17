@@ -1,7 +1,7 @@
 import { Card } from '@/components/Card/Card';
 
-import styles from './BooksPage.module.scss';
 import { BOOK_LIST } from './books.data';
+import styles from './BooksPage.module.scss';
 import { Book } from './components/Book/Book';
 
 const BooksPage = () => {

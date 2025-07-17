@@ -1,12 +1,12 @@
-import { Card } from '@/components/Card/Card';
-import { useForm, Controller } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 
+import { Card } from '@/components/Card/Card';
+import { Button } from '@/components/ui/Button/Button';
 import { Input } from '@/components/ui/Input/Input';
 import { Textarea } from '@/components/ui/Textarea/Textarea';
-import { Button } from '@/components/ui/Button/Button';
+import { Toaster } from '@/components/ui/Toaster';
 
 import styles from './ContactsPage.module.scss';
-import { Toaster } from '@/components/ui/Toaster';
 
 interface IForm {
   name: string;

@@ -1,7 +1,7 @@
+import classNames from 'classnames';
 import Image from 'next/image';
 
 import styles from './Rating.module.scss';
-import classNames from 'classnames';
 
 interface IRatingProps {
   rating: number;

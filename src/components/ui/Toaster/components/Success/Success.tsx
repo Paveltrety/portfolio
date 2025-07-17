@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import styles from './Success.module.scss';
 import { ReactNode } from 'react';
+
+import styles from './Success.module.scss';
 
 interface ISuccessProps {
   message: ReactNode;

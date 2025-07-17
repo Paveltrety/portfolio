@@ -1,9 +1,10 @@
+import cn from 'classnames';
 import Link from 'next/link';
-import styles from './Header.module.scss';
 import { usePathname } from 'next/navigation';
 
-import cn from 'classnames';
 import { Routes } from '@/constants/routes';
+
+import styles from './Header.module.scss';
 
 export const Header = () => {
   const pathname = usePathname();

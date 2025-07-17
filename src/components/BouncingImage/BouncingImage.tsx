@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react';
 
-import styles from './BouncingImage.module.scss';
-import { useWindowSize } from '@/hooks/useWindowSize';
 import { BREAKPOINTS } from '@/constants/breakpoints';
+import { useWindowSize } from '@/hooks/useWindowSize';
+
+import styles from './BouncingImage.module.scss';
 
 export const BouncingImage = () => {
   const logoRef = useRef<HTMLDivElement>(null);
