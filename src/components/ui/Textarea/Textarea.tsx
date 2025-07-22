@@ -2,8 +2,8 @@ import styles from './Textarea.module.scss';
 
 interface ITextareaProps {
   maxLength: number;
-  name: string;
-  label: string;
+  name?: string;
+  label?: string;
   value: string;
   rows?: number;
   onChange: () => void;

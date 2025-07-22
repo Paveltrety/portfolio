@@ -1,0 +1,46 @@
+@use '@/styles/vars' as *;
+
+.title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.itemsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px #0000000a;
+  padding: 12px;
+  gap: 12px;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.itemName {
+  font-weight: 700;
+}

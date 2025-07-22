@@ -21,11 +21,11 @@ export const Header = () => {
       </Link>
       <Link
         className={cn(styles.link, {
-          [styles.active]: pathname === Routes.facts,
+          [styles.active]: pathname === Routes.feed,
         })}
-        href={Routes.facts}
+        href={Routes.feed}
       >
-        Факты
+        Лента
       </Link>
       <Link
         className={cn(styles.link, {

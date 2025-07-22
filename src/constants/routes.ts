@@ -2,7 +2,7 @@ export const MAIN_SITE_URL = 'https://paveltrety.ru';
 
 export const Routes = {
   main: '/',
-  facts: '/facts',
   books: '/books',
+  feed: '/feed',
   contacts: '/contacts',
 } as const;
