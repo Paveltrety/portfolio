@@ -1,4 +1,9 @@
 @use '@/styles/vars' as *;
+@use '@/styles/mixins' as *;
+
+.title {
+  @include text-h1;
+}
 
 .dekstopShow {
   display: block;

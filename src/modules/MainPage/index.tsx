@@ -20,7 +20,7 @@ const TextAboutPhoto = () => {
 const MainPage = () => {
   return (
     <Card>
-      <p>Привет! Я Павел Третьяков - фронтенд раработчик.</p>
+      <h1 className={styles.title}>Привет! Я Павел Третьяков - фронтенд раработчик.</h1>
       <br />
       <TextAboutPhoto />
       <br />
