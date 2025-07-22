@@ -1,6 +1,8 @@
 import dayjs from 'dayjs';
-import styles from './FeedList.module.scss';
+
 import { IFeedItem } from '@/types/feed';
+
+import styles from './FeedList.module.scss';
 
 interface IFeedListProps {
   items: IFeedItem[] | undefined;

@@ -1,13 +1,13 @@
 import { useForm } from 'react-hook-form';
 
 import { Card } from '@/components/Card/Card';
+import { Loader } from '@/components/ui/Loader/Loader';
 import { Toaster } from '@/components/ui/Toaster';
 import { useCreateFeedItemMutation, useGetFeedListQuery } from '@/store/api/feed';
 
-import styles from './FeedPage.module.scss';
-import { FeedList } from './components/FeedList/FeedList';
-import { Loader } from '@/components/ui/Loader/Loader';
 import { FeedForm } from './components/FeedForm/FeedForm';
+import { FeedList } from './components/FeedList/FeedList';
+import styles from './FeedPage.module.scss';
 
 export interface IFeedForm {
   name: string;
@@ -36,7 +36,8 @@ const FeedPage = () => {
       refetch();
 
       Toaster.success('Ура! Все получилось');
-    } catch (error) {
+    } catch (e) {
+      console.log(e)
       Toaster.error('Увы! Что-то пошло не так');
     }
   };

@@ -1,9 +1,11 @@
 import { Controller, UseFormReturn } from 'react-hook-form';
-import styles from './FeedForm.module.scss';
-import { Input } from '@/components/ui/Input/Input';
-import { IFeedForm } from '../..';
-import { Textarea } from '@/components/ui/Textarea/Textarea';
+
 import { Button } from '@/components/ui/Button/Button';
+import { Input } from '@/components/ui/Input/Input';
+import { Textarea } from '@/components/ui/Textarea/Textarea';
+
+import { IFeedForm } from '../..';
+import styles from './FeedForm.module.scss';
 
 interface IFeedFormProps {
   form: UseFormReturn<IFeedForm>;
