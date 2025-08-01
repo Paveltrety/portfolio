@@ -1,7 +1,8 @@
+import { CvList } from 'paveltrety-cv';
+
 import { Card } from '@/components/Card/Card';
 
 import styles from './MainPage.module.scss';
-import { CvList } from 'paveltrety-cv';
 
 const TextAboutPhoto = () => {
   return (
