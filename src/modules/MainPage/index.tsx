@@ -1,7 +1,7 @@
 import { Card } from '@/components/Card/Card';
 
-import { ResumesList } from '../../components/ResumesList/ResumesList';
 import styles from './MainPage.module.scss';
+import { CvList } from 'paveltrety-cv';
 
 const TextAboutPhoto = () => {
   return (
@@ -31,7 +31,7 @@ const MainPage = () => {
       <p>
         Более подробная информация о моем коммерческом опыте в <b>резюме</b>:
       </p>
-      <ResumesList className={styles.resumes} />
+      <CvList className={styles.resumes} linkClassName={styles.link} />
     </Card>
   );
 };

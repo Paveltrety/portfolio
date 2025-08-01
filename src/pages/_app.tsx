@@ -1,5 +1,6 @@
 import '@/styles/styles.scss';
 import '@/styles/globals.scss';
+import 'paveltrety-cv/dist/style.css';
 
 import type { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
