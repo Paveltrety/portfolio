@@ -28,7 +28,7 @@ export const BOOK_LIST: IBook[] = [
   },
   {
     name: 'Безнадега',
-    rate: 0,
+    rate: 5,
     image: 'desperation.jpg',
   },
 ];
