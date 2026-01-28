@@ -5,8 +5,10 @@ import { usePathname } from 'next/navigation';
 import { Routes } from '@/constants/routes';
 
 import styles from './Header.module.scss';
+import { useTranslation } from 'react-i18next';
 
 export const Header = () => {
+  const { t } = useTranslation();
   const pathname = usePathname();
 
   return (
@@ -33,7 +35,7 @@ export const Header = () => {
         })}
         href={Routes.books}
       >
-        Книги
+        {t('navbar.books')}
       </Link>
       <Link
         className={cn(styles.link, {

@@ -9,6 +9,8 @@ import { Provider } from 'react-redux';
 import { Layout } from '@/components/Layout/Layout';
 import { Routes } from '@/constants/routes';
 import store from '@/store';
+import '@/i18n/config';
+
 
 const inter = Inter({
   variable: '--font-inter',

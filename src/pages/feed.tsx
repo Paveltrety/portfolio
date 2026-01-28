@@ -3,12 +3,12 @@ import { GetStaticProps } from 'next';
 export const getStaticProps: GetStaticProps = async () => {
   return {
     redirect: {
-      destination: '/ru/',
+      destination: '/ru/feed',
       permanent: false,
     },
   };
 };
 
-export default function Index() {
+export default function Feed() {
   return null;
 }
