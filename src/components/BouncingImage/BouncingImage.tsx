@@ -14,19 +14,18 @@ export const BouncingImage = () => {
 
   useEffect(() => {
     const logo = logoRef.current;
+    if (!logo || isMobile) return;
 
-    let x = 100;
-    let y = 100;
+    const rect = logo.getBoundingClientRect();
+    console.log(logo, 'logo')
+    let x = rect.left;
+    let y = rect.top;
     let dx = 1.2;
     let dy = 1.2;
 
     let animFrameId: number;
 
     const move = () => {
-      if (isMobile) {
-        return;
-      }
-
       const screenW = window.innerWidth;
       const screenH = window.innerHeight;
       const logoW = logo!.offsetWidth;
