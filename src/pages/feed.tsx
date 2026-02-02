@@ -1,14 +1,10 @@
-import { GetStaticProps } from 'next';
+import Head from 'next/head';
 
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    redirect: {
-      destination: '/ru/feed',
-      permanent: false,
-    },
-  };
-};
-
-export default function Feed() {
-  return null;
+export default function FeedRedirect() {
+  return (
+    <Head>
+      <meta httpEquiv="refresh" content="0;url=/ru/feed/" />
+      <meta name="robots" content="noindex, follow" />
+    </Head>
+  );
 }

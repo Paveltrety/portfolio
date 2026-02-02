@@ -14,14 +14,3 @@ export default function Books() {
     </>
   );
 }
-
-export async function getStaticPaths() {
-  return {
-    paths: [{ params: { locale: 'en' } }, { params: { locale: 'ru' } }],
-    fallback: false,
-  };
-}
-
-export async function getStaticProps() {
-  return { props: {} };
-}

@@ -1,14 +1,10 @@
-import { GetStaticProps } from 'next';
+import Head from 'next/head';
 
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    redirect: {
-      destination: '/ru/books',
-      permanent: false,
-    },
-  };
-};
-
-export default function Books() {
-  return null;
+export default function BooksRedirect() {
+  return (
+    <Head>
+      <meta httpEquiv="refresh" content="0;url=/ru/books/" />
+      <meta name="robots" content="noindex, follow" />
+    </Head>
+  );
 }

@@ -1,14 +1,13 @@
-import { GetStaticProps } from 'next';
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    redirect: {
-      destination: '/ru/',
-      permanent: false,
-    },
-  };
-};
-
 export default function Index() {
-  return null;
+  return (
+    <html lang="ru">
+      <head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="refresh" content="0;url=/ru/" />
+        <link rel="canonical" href="/ru/" />
+        <meta name="robots" content="noindex, follow" />
+      </head>
+      <body></body>
+    </html>
+  );
 }

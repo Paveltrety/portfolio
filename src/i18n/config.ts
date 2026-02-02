@@ -1,24 +1,26 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-const locales = ['en', 'ru'];
+import en from '../../public/translations/en/common.json';
+import ru from '../../public/translations/ru/common.json';
+
+const DEFAULT_LANG = 'ru';
 
 i18n.use(initReactI18next).init({
-  fallbackLng: 'ru',
-  supportedLngs: locales,
+  lng: DEFAULT_LANG,
+  fallbackLng: DEFAULT_LANG,
+  supportedLngs: ['ru', 'en'],
+  ns: ['common'],
   defaultNS: 'common',
-  ns: ['common', 'books'],
   interpolation: {
     escapeValue: false,
   },
   resources: {
-    en: {
-      common: require('../../public/locales/en/common.json'),
-      books: require('../../public/locales/en/books.json'),
-    },
     ru: {
-      common: require('../../public/locales/ru/common.json'),
-      books: require('../../public/locales/ru/books.json'),
+      common: ru,
+    },
+    en: {
+      common: en,
     },
   },
 });

@@ -1,14 +1,10 @@
-import { GetStaticProps } from 'next';
+import Head from 'next/head';
 
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    redirect: {
-      destination: '/ru/contacts',
-      permanent: false,
-    },
-  };
-};
-
-export default function Contacts() {
-  return null;
+export default function ContactsRedirect() {
+  return (
+    <Head>
+      <meta httpEquiv="refresh" content="0;url=/ru/contacts/" />
+      <meta name="robots" content="noindex, follow" />
+    </Head>
+  );
 }
