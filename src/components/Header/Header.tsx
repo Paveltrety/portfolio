@@ -1,12 +1,14 @@
 import cn from 'classnames';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
 
 import { Routes } from '@/constants/routes';
 
 import styles from './Header.module.scss';
 
 export const Header = () => {
+  const { t } = useTranslation();
   const pathname = usePathname();
 
   return (
@@ -17,7 +19,7 @@ export const Header = () => {
         })}
         href={Routes.main}
       >
-        Обо мне
+        {t('navbar.about_me')}
       </Link>
       <Link
         className={cn(styles.link, {
@@ -25,7 +27,7 @@ export const Header = () => {
         })}
         href={Routes.feed}
       >
-        Лента
+        {t('navbar.feed')}
       </Link>
       <Link
         className={cn(styles.link, {
@@ -33,7 +35,7 @@ export const Header = () => {
         })}
         href={Routes.books}
       >
-        Книги
+        {t('navbar.books')}
       </Link>
       <Link
         className={cn(styles.link, {
@@ -41,7 +43,7 @@ export const Header = () => {
         })}
         href={Routes.contacts}
       >
-        Связь
+        {t('navbar.connection')}
       </Link>
     </div>
   );
