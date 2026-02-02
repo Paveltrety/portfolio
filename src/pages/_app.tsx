@@ -1,10 +1,9 @@
 import '@/styles/styles.scss';
 import '@/styles/globals.scss';
-import '@/i18n/config';
 
 import type { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { Provider } from 'react-redux';
 
 import { Layout } from '@/components/Layout/Layout';
@@ -18,7 +17,7 @@ const inter = Inter({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
-  const { pathname } = useRouter();
+  const pathname = usePathname();
 
   return (
     <>
