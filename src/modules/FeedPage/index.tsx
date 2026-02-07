@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import { Card } from '@/components/Card/Card';
 import { Loader } from '@/components/ui/Loader/Loader';
@@ -20,6 +21,8 @@ const DEFAULT_VALUES: IFeedForm = {
 };
 
 const FeedPage = () => {
+  const { t } = useTranslation();
+
   const form = useForm<IFeedForm>({ defaultValues: DEFAULT_VALUES });
   const { reset } = form;
 
@@ -35,16 +38,16 @@ const FeedPage = () => {
       reset(DEFAULT_VALUES);
       refetch();
 
-      Toaster.success('Ура! Все получилось');
+      Toaster.success(t('toasts.success'));
     } catch (e) {
-      console.log(e)
-      Toaster.error('Увы! Что-то пошло не так');
+      console.log(e);
+      Toaster.error(t('toasts.error'));
     }
   };
 
   return (
     <Card>
-      <h1 className={styles.title}>Можешь написать свое сообщение</h1>
+      <h1 className={styles.title}>{t('feed.title')}</h1>
       <div className={styles.root}>
         <FeedForm form={form} onSubmit={onSubmit} />
         {isLoading ? <Loader /> : <FeedList items={messagesList} />}

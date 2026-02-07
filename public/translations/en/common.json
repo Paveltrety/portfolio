@@ -1,1 +1,56 @@
-{ "navbar": { "about_me": "About me", "feed": "Feed", "books": "Books", "connection": "Form" } }
+{
+  "navbar": { "about_me": "About me", "feed": "Feed", "books": "Books", "connection": "Connection" },
+  "seo": {
+    "main": {
+      "title": "Pavel Tretyakov — Frontend Developer | React, Next.js, TypeScript",
+      "description": "Hi! I'm Pavel Tretyakov, a frontend developer with over 5 years of experience. I specialize in React, Next.js, and TypeScript, building modern and high-performance web applications."
+    },
+    "feed": {
+      "title": "Message Feed — Write Anything",
+      "description": "Write any message and it will appear in the public feed."
+    },
+    "books": {
+      "title": "Books I've Read — Pavel Tretyakov Portfolio",
+      "description": "A list of books read by Pavel Tretyakov with short reviews and personal insights."
+    },
+    "contacts": {
+      "title": "Contacts — Pavel Tretyakov Portfolio",
+      "description": "Get in touch with Pavel Tretyakov via email, social networks, or an anonymous feedback form."
+    }
+  },
+  "main": {
+    "title": "Hi! I'm Pavel Tretyakov – a frontend developer.",
+    "about_photo": "I haven't fully decided where to place my photo yet, so for now it just floats in the background (I don't recommend trying to catch it).",
+    "about_photo_mobile": "I haven't fully decided where to place my photo yet, so for now it just floats at the top.",
+    "about_stack": "I work professionally with ReactJS, Next.js, TypeScript <b>for over 5 years</b>.",
+    "about_resume": "More detailed information about my commercial experience can be found in my <b>resume</b>:"
+  },
+  "feed": {
+    "title": "You can write your message"
+  },
+  "books": {
+    "title": "This section shows the books I’ve read this year.",
+    "description": "Each book is rated on Pavel’s five-point scale: the more Pavels, the better."
+  },
+  "contacts": {
+    "title": "You can send me an <b>anonymous message</b>"
+  },
+  "errors": {
+    "fill_in_the_field": "Fill in the field"
+  },
+  "form": {
+    "name_label": "Introduce yourself (optional)",
+    "name_placeholder": "Vasya Pupkin",
+    "message_label": "Message",
+    "message_placeholder": "Pasha, your website is freaking awesome!",
+    "send": "Send",
+    "limit_symbols": "{{valueLength}}/{{maxLength}} characters"
+  },
+  "toasts": {
+    "success": "Hooray! Everything worked",
+    "error": "Oops! Something went wrong"
+  },
+  "bouncing_image": {
+    "title": "Hey, bug, let me go!!!"
+  }
+}

@@ -1,4 +1,5 @@
 export interface IResume {
-  pathFile: string;
+  id: number;
+  pathFile: Record<'en' | 'ru', string>;
   name: string;
 }

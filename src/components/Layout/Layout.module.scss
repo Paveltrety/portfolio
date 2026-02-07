@@ -10,7 +10,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* fallback */
+  min-height: 100vh;
   min-height: 100svh;
   max-width: 1080px;
   width: 100%;

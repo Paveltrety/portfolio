@@ -1,10 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import { feedApi } from './api/feed';
-import { feedSlice } from './modules/feed/reducer';
+import { localeSlice } from './modules/locale/reducer';
 
 const rootReducer = combineReducers({
-  feed: feedSlice.reducer,
+  locale: localeSlice.reducer,
   [feedApi.reducerPath]: feedApi.reducer,
 });
 
