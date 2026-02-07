@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 
 import { DownloadLink } from '@/components/ui/DownloadLink/DownloadButton';
+import { useLocaleFromQuery } from '@/hooks/useLocaleFromQuery';
 
 import { RESUMES_LIST } from './resumesList.data';
 import styles from './ResumesList.module.scss';
-import { useLocaleFromQuery } from '@/hooks/useLocaleFromQuery';
 
 interface IResumesListProps {
   className: string;
