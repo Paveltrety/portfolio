@@ -1,48 +1,54 @@
 import cn from 'classnames';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
 
 import { Routes } from '@/constants/routes';
+import { usePathnameWithoutLocale } from '@/hooks/usePathnameWithoutLocale';
+import { StaticI18nLink } from '@/i18n/withStaticI18n';
 
 import styles from './Header.module.scss';
 
 export const Header = () => {
-  const pathname = usePathname();
+  const { t } = useTranslation();
+  const pathname = usePathnameWithoutLocale();
+
+  const isActiveLink = (href: string) => {
+    return pathname === href;
+  };
 
   return (
     <div className={styles.root}>
-      <Link
+      <StaticI18nLink
         className={cn(styles.link, {
-          [styles.active]: pathname === Routes.main,
+          [styles.active]: isActiveLink(Routes.main),
         })}
         href={Routes.main}
       >
-        Обо мне
-      </Link>
-      <Link
+        {t('navbar.about_me')}
+      </StaticI18nLink>
+      <StaticI18nLink
         className={cn(styles.link, {
-          [styles.active]: pathname === Routes.feed,
+          [styles.active]: isActiveLink(Routes.feed),
         })}
         href={Routes.feed}
       >
-        Лента
-      </Link>
-      <Link
+        {t('navbar.feed')}
+      </StaticI18nLink>
+      <StaticI18nLink
         className={cn(styles.link, {
-          [styles.active]: pathname === Routes.books,
+          [styles.active]: isActiveLink(Routes.books),
         })}
         href={Routes.books}
       >
-        Книги
-      </Link>
-      <Link
+        {t('navbar.books')}
+      </StaticI18nLink>
+      <StaticI18nLink
         className={cn(styles.link, {
-          [styles.active]: pathname === Routes.contacts,
+          [styles.active]: isActiveLink(Routes.contacts),
         })}
         href={Routes.contacts}
       >
-        Связь
-      </Link>
+        {t('navbar.connection')}
+      </StaticI18nLink>
     </div>
   );
 };

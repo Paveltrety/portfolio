@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import styles from './Textarea.module.scss';
 
 interface ITextareaProps {
@@ -12,6 +14,7 @@ interface ITextareaProps {
 }
 
 export const Textarea = ({ value, error, maxLength, name, label, rows = 4, onChange, placeholder }: ITextareaProps) => {
+  const { t } = useTranslation();
   return (
     <div className={styles.root}>
       <label className={styles.label}>{label}</label>
@@ -27,7 +30,10 @@ export const Textarea = ({ value, error, maxLength, name, label, rows = 4, onCha
       <div className={styles.subContent}>
         {error && <span className={styles.error}>{error}</span>}
         <span className={styles.counter}>
-          {value.length}/{maxLength} символов
+          {t('form.limit_symbols', {
+            valueLength: value.length,
+            maxLength,
+          })}
         </span>
       </div>
     </div>

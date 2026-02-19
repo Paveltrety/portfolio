@@ -2,9 +2,9 @@
 @use '@/styles/mixins' as *;
 
 .title {
-  @include text-h1;
   margin-bottom: 12px;
   text-align: center;
+  @include text-h1;
 }
 
 .description {

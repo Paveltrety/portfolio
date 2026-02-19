@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { BREAKPOINTS } from '@/constants/breakpoints';
 import { useWindowSize } from '@/hooks/useWindowSize';
@@ -6,6 +7,7 @@ import { useWindowSize } from '@/hooks/useWindowSize';
 import styles from './BouncingImage.module.scss';
 
 export const BouncingImage = () => {
+  const { t } = useTranslation();
   const logoRef = useRef<HTMLDivElement>(null);
   const isPaused = useRef(false);
 
@@ -76,7 +78,7 @@ export const BouncingImage = () => {
       onTouchEnd={resume}
       className={styles.root}
     >
-      <span>Эй, жук, отпусти меня!!!</span>
+      <span>{t('bouncing_image.title')}</span>
     </div>
   );
 };

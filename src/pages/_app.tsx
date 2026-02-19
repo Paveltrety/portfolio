@@ -3,11 +3,10 @@ import '@/styles/globals.scss';
 
 import type { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
-import { usePathname } from 'next/navigation';
 import { Provider } from 'react-redux';
 
 import { Layout } from '@/components/Layout/Layout';
-import { Routes } from '@/constants/routes';
+import { withStaticI18n } from '@/i18n/withStaticI18n';
 import store from '@/store';
 
 const inter = Inter({
@@ -16,9 +15,7 @@ const inter = Inter({
   display: 'swap',
 });
 
-export default function App({ Component, pageProps }: AppProps) {
-  const pathname = usePathname();
-
+function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <style jsx global>{`
@@ -27,10 +24,12 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
       <Provider store={store}>
-        <Layout isMainPage={pathname === Routes.main}>
+        <Layout>
           <Component {...pageProps} />
         </Layout>
       </Provider>
     </>
   );
 }
+
+export default withStaticI18n(App);

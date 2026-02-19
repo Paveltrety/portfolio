@@ -1,4 +1,5 @@
 import { Controller, useForm } from 'react-hook-form';
+import { Trans, useTranslation } from 'react-i18next';
 
 import { Card } from '@/components/Card/Card';
 import { Button } from '@/components/ui/Button/Button';
@@ -19,6 +20,8 @@ const DEFAULT_VALUES: IForm = {
 };
 
 const ContactsPage = () => {
+  const { t } = useTranslation();
+
   const {
     control,
     formState: { isSubmitting },
@@ -37,17 +40,23 @@ const ContactsPage = () => {
         },
       );
       reset(DEFAULT_VALUES);
-      Toaster.success('Ура! Все получилось');
+      Toaster.success(t('toasts.success'));
     } catch (error) {
       console.log(error);
-      Toaster.error('Увы! Что-то пошло не так');
+      Toaster.error(t('toasts.error'));
     }
   };
 
   return (
     <Card>
       <p className={styles.title}>
-        Можешь написать мне <b>анонимное сообщение</b>
+        <Trans
+          i18nKey={t('contacts.title')}
+          t={t}
+          components={{
+            b: <b />,
+          }}
+        />
       </p>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <Controller
@@ -55,7 +64,7 @@ const ContactsPage = () => {
           control={control}
           rules={{ required: false }}
           render={({ field: { value, onChange } }) => (
-            <Input name="name" placeholder="Вася Пупкин" label="Представься (по желанию)" value={value} onChange={onChange} />
+            <Input name="name" placeholder={t('form.name_placeholder')} label={t('form.name_label')} value={value} onChange={onChange} />
           )}
         />
 
@@ -65,14 +74,14 @@ const ContactsPage = () => {
           rules={{
             required: {
               value: true,
-              message: 'Заполни поле',
+              message: t('errors.fill_in_the_field'),
             },
           }}
           render={({ field: { value, onChange }, fieldState: { error } }) => (
             <Textarea
               name="message"
-              label="Сообщение"
-              placeholder="Паша, твой сайт чертовски крут!"
+              label={t('form.message_label')}
+              placeholder={t('form.message_placeholder')}
               value={value}
               onChange={onChange}
               maxLength={250}
@@ -81,7 +90,7 @@ const ContactsPage = () => {
           )}
         />
 
-        <Button isDisabled={isSubmitting} type="submit" text="Отправить" />
+        <Button isDisabled={isSubmitting} type="submit" text={t('form.send')} />
       </form>
     </Card>
   );

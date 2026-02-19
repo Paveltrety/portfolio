@@ -2,15 +2,19 @@ import { IResume } from '@/types/resumes';
 
 export const RESUMES_LIST: IResume[] = [
   {
-    pathFile: 'resumes/Tretyakov Pavel.pdf',
+    id: 1,
+    pathFile: {
+      en: '',
+      ru: 'resumes/ru/Tretyakov Pavel - frontend developer.pdf',
+    },
     name: 'Tretyakov Pavel.pdf',
   },
   {
-    pathFile: 'resumes/Tretyakov Pavel.doc',
-    name: 'Tretyakov Pavel.doc',
-  },
-  {
-    pathFile: 'resumes/Tretyakov Pavel.rtf',
-    name: 'Tretyakov Pavel.rtf',
+    id: 2,
+    pathFile: {
+      en: 'resumes/en/Tretyakov Pavel - frontend developer.docx',
+      ru: 'resumes/ru/Tretyakov Pavel - frontend developer.docx',
+    },
+    name: 'Tretyakov Pavel.docx',
   },
 ];
