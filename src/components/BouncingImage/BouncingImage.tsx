@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { BREAKPOINTS } from '@/constants/breakpoints';
 import { useWindowSize } from '@/hooks/useWindowSize';
+import { sendYandexMetrikEvent } from '@/utils/sendYandexMetrikEvent';
 
 import styles from './BouncingImage.module.scss';
 
@@ -19,7 +20,7 @@ export const BouncingImage = () => {
     if (!logo || isMobile) return;
 
     const rect = logo.getBoundingClientRect();
-    console.log(logo, 'logo')
+
     let x = rect.left;
     let y = rect.top;
     let dx = 1.2;
@@ -59,6 +60,7 @@ export const BouncingImage = () => {
   }, [isMobile]);
 
   const pause = () => {
+    sendYandexMetrikEvent('click_desktop_photo');
     isPaused.current = true;
     logoRef.current?.classList.add(styles.pause);
   };
