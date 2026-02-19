@@ -11,6 +11,7 @@
 html {
   font-size: 18px;
   line-height: normal;
+  font-weight: 400;
   /* 2 */
 }
 
@@ -98,8 +99,9 @@ abbr[title] {
  */
 
 b,
-strong {
-  font-weight: 700;
+strong,
+h1 {
+  font-weight: 600;
 }
 
 /**
