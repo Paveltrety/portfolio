@@ -1,13 +1,17 @@
 .root {
-  background-color: #1f81b9;
   font-size: 16px;
-  color: white;
+
   height: 42px;
   border-radius: 12px;
   width: 100%;
   border: none;
   cursor: pointer;
+}
+
+.blue {
   border: 1px solid rgba(31, 129, 185, 0.3);
+  color: white;
+  background-color: #1f81b9;
 
   &:hover {
     background-color: #3899cf;
@@ -15,5 +19,17 @@
 
   &:disabled {
     background: #e4e4e4;
+  }
+}
+
+.black {
+  background: rgb(23, 23, 23);
+  color: rgb(255, 255, 255);
+  transition-property: background;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+
+  &:hover {
+    background: #383838;
   }
 }

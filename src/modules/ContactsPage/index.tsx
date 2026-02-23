@@ -1,7 +1,6 @@
 import { Controller, useForm } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';
 
-import { Card } from '@/components/Card/Card';
 import { Button } from '@/components/ui/Button/Button';
 import { Input } from '@/components/ui/Input/Input';
 import { Textarea } from '@/components/ui/Textarea/Textarea';
@@ -48,7 +47,7 @@ const ContactsPage = () => {
   };
 
   return (
-    <Card>
+    <>
       <p className={styles.title}>
         <Trans
           i18nKey={t('contacts.title')}
@@ -92,7 +91,7 @@ const ContactsPage = () => {
 
         <Button isDisabled={isSubmitting} type="submit" text={t('form.send')} />
       </form>
-    </Card>
+    </>
   );
 };
 

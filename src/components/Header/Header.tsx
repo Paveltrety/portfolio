@@ -12,7 +12,11 @@ export const Header = () => {
   const pathname = usePathnameWithoutLocale();
 
   const isActiveLink = (href: string) => {
-    return pathname === href;
+    if (href === Routes.main) {
+      return pathname === href;
+    }
+
+    return pathname?.startsWith(href);
   };
 
   return (
@@ -27,20 +31,13 @@ export const Header = () => {
       </StaticI18nLink>
       <StaticI18nLink
         className={cn(styles.link, {
-          [styles.active]: isActiveLink(Routes.feed),
+          [styles.active]: isActiveLink(Routes.portfolio),
         })}
-        href={Routes.feed}
+        href={Routes.portfolio}
       >
-        {t('navbar.feed')}
+        {t('navbar.portfolio')}
       </StaticI18nLink>
-      <StaticI18nLink
-        className={cn(styles.link, {
-          [styles.active]: isActiveLink(Routes.books),
-        })}
-        href={Routes.books}
-      >
-        {t('navbar.books')}
-      </StaticI18nLink>
+
       <StaticI18nLink
         className={cn(styles.link, {
           [styles.active]: isActiveLink(Routes.contacts),

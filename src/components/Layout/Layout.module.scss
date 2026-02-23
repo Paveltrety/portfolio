@@ -29,7 +29,7 @@
   flex-shrink: 0; /* Фиксированная высота, не сжимается */
 }
 
-.content {
+.main {
   display: flex;
   align-items: center;
   flex-grow: 1; /* Контент займет все свободное место */
@@ -37,5 +37,25 @@
 
   @media (max-width: $sm) {
     padding: 24px 0;
+  }
+}
+
+.content {
+  background-color: #ffffff;
+  width: 100%;
+  z-index: 2;
+  border-radius: 8px;
+  box-shadow:
+    0 0 0 0px #fff,
+    0 0 0 1px rgba(17, 24, 39, 0.05),
+    0 20px 25px -5px hsla(0, 0%, 0%, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  min-height: 380px;
+  position: relative;
+
+  @media (max-width: $sm) {
+    padding: 14px;
+    font-size: 16px;
   }
 }

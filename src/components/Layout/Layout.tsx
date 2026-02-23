@@ -26,7 +26,9 @@ export const Layout = ({ children }: PropsWithChildren) => {
         </header>
         {isMainPage && <FloatingImage />}
         <LocaleSelect />
-        <main className={styles.content}>{children}</main>
+        <main className={styles.main}>
+          <div className={styles.content}>{children}</div>
+        </main>
         <footer className={styles.footer}>
           <Footer />
         </footer>

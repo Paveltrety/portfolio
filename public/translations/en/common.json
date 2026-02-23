@@ -1,17 +1,17 @@
 {
-  "navbar": { "about_me": "About me", "feed": "Feed", "books": "Books", "connection": "Connection" },
+  "navbar": { "about_me": "About me", "portfolio": "Portfolio", "connection": "Connection" },
   "seo": {
     "main": {
       "title": "Pavel Tretyakov — Frontend Developer | React, Next.js, TypeScript",
       "description": "Hi! I'm Pavel Tretyakov, a frontend developer with over 5 years of experience. I specialize in React, Next.js, and TypeScript, building modern and high-performance web applications."
     },
-    "feed": {
-      "title": "Message Feed — Write Anything",
-      "description": "Write any message and it will appear in the public feed."
-    },
-    "books": {
-      "title": "Books I've Read — Pavel Tretyakov Portfolio",
-      "description": "A list of books read by Pavel Tretyakov with short reviews and personal insights."
+    "portfolio": {
+      "title": "Portfolio — Pavel Tretyakov Projects | React, Next.js, TypeScript",
+      "description": "Portfolio of frontend developer Pavel Tretyakov. Here you can find my pet projects and real-world applications built with React, Next.js, and TypeScript, demonstrating my skills in developing modern web applications and user interfaces.",
+      "coverLetter": {
+        "title": "AI Cover Letter Generator — Pavel Tretyakov Project",
+        "description": "An AI-powered service for automatically generating personalized cover letters based on job postings. A project by frontend developer Pavel Tretyakov demonstrating work with React, AI, and modern web technologies."
+      }
     },
     "contacts": {
       "title": "Contacts — Pavel Tretyakov Portfolio",
@@ -25,12 +25,21 @@
     "about_stack": "I work professionally with ReactJS, Next.js, TypeScript <b>for over 5 years</b>.",
     "about_resume": "More detailed information about my commercial experience can be found in my <b>resume</b>:"
   },
-  "feed": {
-    "title": "You can write your message"
-  },
-  "books": {
-    "title": "This section shows the books I’ve read this year.",
-    "description": "Each book is rated on Pavel’s five-point scale: the more Pavels, the better."
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Here are my projects that I build both for passion and to showcase what I’m capable of.",
+    "backToPortfolio": "Back to portfolio",
+    "check": "Check",
+    "aboutProject": "About the project",
+    "technologies": "Technologies",
+    "coverLetter": {
+      "titleCard": "Cover Letter Generation",
+      "descriptionCard": "Add a job posting link and AI will increase your chances of getting hired",
+      "title": "Cover Letter",
+      "subTitle": "Increase your chances of getting a job with AI",
+      "descriptionParagraphFirst": "The web service automatically creates a personalized cover letter based on a job vacancy link. The application analyzes the job description, identifies employer requirements, and generates a relevant response tailored to the candidate’s profile.",
+      "descriptionParagraphSecond": "Helps speed up the job application process and improve the quality of communication with employers."
+    }
   },
   "contacts": {
     "title": "You can send me an <b>anonymous message</b>"

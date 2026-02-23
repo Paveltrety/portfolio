@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+
 import styles from './Button.module.scss';
 
 interface IButtonProps {
@@ -5,11 +7,13 @@ interface IButtonProps {
   onClick?: () => void;
   type?: 'submit' | 'reset' | 'button';
   isDisabled?: boolean;
+  variant?: 'blue' | 'black';
+  className?: string;
 }
 
-export const Button = ({ text, type, onClick, isDisabled }: IButtonProps) => {
+export const Button = ({ text, className, variant = 'blue', type, onClick, isDisabled }: IButtonProps) => {
   return (
-    <button className={styles.root} type={type} disabled={isDisabled} onClick={onClick}>
+    <button className={classNames(styles.root, className, styles[variant])} type={type} disabled={isDisabled} onClick={onClick}>
       {text}
     </button>
   );

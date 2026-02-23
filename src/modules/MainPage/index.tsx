@@ -1,7 +1,5 @@
 import { Trans, useTranslation } from 'react-i18next';
 
-import { Card } from '@/components/Card/Card';
-
 import { ResumesList } from '../../components/ResumesList/ResumesList';
 import styles from './MainPage.module.scss';
 
@@ -19,7 +17,7 @@ const TextAboutPhoto = () => {
 const MainPage = () => {
   const { t } = useTranslation();
   return (
-    <Card>
+    <>
       <h1 className={styles.title}>{t('main.title')}</h1>
       <br />
       <TextAboutPhoto />
@@ -44,7 +42,7 @@ const MainPage = () => {
         />
       </p>
       <ResumesList className={styles.resumes} />
-    </Card>
+    </>
   );
 };
 

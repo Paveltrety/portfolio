@@ -3,15 +3,19 @@ import { useTranslation } from 'react-i18next';
 
 import { SeoHead } from '@/components/SeoHead/SeoHead';
 import { MAIN_SITE_URL, Routes } from '@/constants/routes';
-import BooksPage from '@/modules/BooksPage';
+import CoverLetterPage from '@/modules/CoverLetterPage';
 import { getCommonStaticPaths, getCommonStaticProps } from '@/utils/getCommonStaticData';
 
-export default function Books() {
+export default function CoverLetter() {
   const { t } = useTranslation();
   return (
     <>
-      <SeoHead title={t('seo.books.title')} description={t('seo.books.description')} url={`${MAIN_SITE_URL}${Routes.books}`} />
-      <BooksPage />
+      <SeoHead
+        title={t('seo.portfolio.coverLetter.title')}
+        description={t('seo.portfolio.coverLetter.description')}
+        url={`${MAIN_SITE_URL}${Routes.portfolioCoverLetter}`}
+      />
+      <CoverLetterPage />
     </>
   );
 }
