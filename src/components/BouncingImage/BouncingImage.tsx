@@ -12,41 +12,46 @@ export const BouncingImage = () => {
   const logoRef = useRef<HTMLDivElement>(null);
   const isPaused = useRef(false);
 
-  const { width } = useWindowSize();
+  const { width, height } = useWindowSize();
   const isMobile = width < BREAKPOINTS.md;
 
   useEffect(() => {
     const logo = logoRef.current;
     if (!logo || isMobile) return;
-
+    logo.style.transform = 'none';
     const rect = logo.getBoundingClientRect();
 
-    let x = rect.left;
-    let y = rect.top;
+    const logoW = logo.offsetWidth;
+    const logoH = logo.offsetHeight;
+
+    const startX = rect.left;
+    const startY = rect.top;
+
+    const maxX = window.innerWidth - logoW - startX;
+    const maxY = window.innerHeight - logoH - startY;
+
+    let x = 0;
+    let y = 0;
+
     let dx = 1.2;
     let dy = 1.2;
 
     let animFrameId: number;
 
     const move = () => {
-      const screenW = window.innerWidth;
-      const screenH = window.innerHeight;
-      const logoW = logo!.offsetWidth;
-      const logoH = logo!.offsetHeight;
-
       if (!isPaused.current) {
         x += dx;
         y += dy;
 
-        if (x + logoW >= screenW || x <= 0) {
+        if (x >= maxX || x <= 0) {
           dx = -dx;
         }
-        if (y + logoH >= screenH || y <= 0) {
+
+        if (y >= maxY || y <= 0) {
           dy = -dy;
         }
 
-        logo!.style.left = `${x}px`;
-        logo!.style.top = `${y}px`;
+        logo.style.transform = `translate3d(${x}px, ${y}px, 0)`;
       }
 
       animFrameId = requestAnimationFrame(move);
@@ -57,7 +62,7 @@ export const BouncingImage = () => {
     return () => {
       cancelAnimationFrame(animFrameId);
     };
-  }, [isMobile]);
+  }, [isMobile, width, height]);
 
   const pause = () => {
     sendYandexMetrikEvent('click_desktop_photo');

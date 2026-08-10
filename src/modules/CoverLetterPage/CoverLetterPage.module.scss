@@ -29,11 +29,8 @@
 }
 
 .headerTitle {
-  @include text-h1;
-
-  color: rgb(23, 23, 23);
-  font-weight: 600;
   margin-bottom: 8px;
+  @include text-h1;
 }
 
 .subTitle {
